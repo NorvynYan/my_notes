@@ -8,7 +8,8 @@
 5. latex
 6. 机器学习
 ### 2025.09.07
-
+1. 看完了iron man 1
+2. 
 
 
 ### 2025.09.06
@@ -28,6 +29,6 @@
 2. 配置好了github部分，明天有时间学习下docker
 3. b站计算机网络微课堂1.1-1.5
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NjkzMjI2MiwxMDExMDQwODYyLC05OT
-I2MzI4ODldfQ==
+eyJoaXN0b3J5IjpbOTkxMzM3MTI5LC02NzY5MzIyNjIsMTAxMT
+A0MDg2MiwtOTkyNjMyODg5XX0=
 -->
