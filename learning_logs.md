@@ -1,3 +1,82 @@
+车辆运动学模型
+  # 欧拉法离散化公式
+
+## 连续时间模型
+$$
+\frac{d}{dt} 
+\begin{bmatrix} 
+x \\ 
+v \\ 
+a 
+\end{bmatrix} 
+= 
+\begin{bmatrix} 
+v \\ 
+a \\ 
+\frac{u - a}{\tau} 
+\end{bmatrix}
+$$
+
+## 欧拉离散化公式
+$$
+X_{k+1} = X_k + \Delta t \cdot f(X_k, u_k)
+$$
+
+## 展开后的离散状态方程
+$$
+\begin{aligned}
+x_{k+1} &= x_k + \Delta t \cdot v_k \\
+v_{k+1} &= v_k + \Delta t \cdot a_k \\
+a_{k+1} &= a_k + \Delta t \cdot \frac{u_k - a_k}{\tau}
+\end{aligned}
+$$
+
+## 整理后的形式
+$$
+\begin{aligned}
+x_{k+1} &= x_k + \Delta t \cdot v_k \\
+v_{k+1} &= v_k + \Delta t \cdot a_k \\
+a_{k+1} &= \left(1 - \frac{\Delta t}{\tau}\right) a_k + \frac{\Delta t}{\tau} u_k
+\end{aligned}
+$$
+
+## 矩阵形式的状态空间方程
+$$
+\begin{bmatrix} 
+x_{k+1} \\ 
+v_{k+1} \\ 
+a_{k+1} 
+\end{bmatrix} 
+= 
+\begin{bmatrix} 
+1 & \Delta t & 0 \\ 
+0 & 1 & \Delta t \\ 
+0 & 0 & 1 - \frac{\Delta t}{\tau} 
+\end{bmatrix} 
+\begin{bmatrix} 
+x_k \\ 
+v_k \\ 
+a_k 
+\end{bmatrix} 
++ 
+\begin{bmatrix} 
+0 \\ 
+0 \\ 
+\frac{\Delta t}{\tau} 
+\end{bmatrix} 
+u_k
+$$
+
+## 参数说明
+- $x$: 车辆位置 (m)
+- $v$: 车辆速度 (m/s)
+- $a$: 车辆加速度 (m/s²)
+- $u$: 控制输入 (期望加速度，m/s²)
+- $\tau$: 执行器时间常数 (s)
+- $\Delta t$: 离散时间步长 (s)
+
+
+
 # learning logs
 
 
